@@ -2,6 +2,9 @@
 
 # Insurance Risk & Claims Analysis Dashboard | SQL + Power BI
 
+## 📊 SCREENSHOT /DEMOS
+https://github.com/Aditya07ver/Insurance_Dashbaords/blob/main/Snapshot_Insurance_Dashbaords.png
+
 ## 📊 Project Overview
 
 This project focuses on analyzing insurance data using SQL and Microsoft Power BI. The dashboard provides insights into insurance policies, claim amounts, claim frequency, and different factors related to insurance claims.
