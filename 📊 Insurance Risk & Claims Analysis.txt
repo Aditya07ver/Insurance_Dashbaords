@@ -1,0 +1,112 @@
+📊 Insurance Risk & Claims Analysis Dashboard | SQL + Power BI
+
+I recently completed an Insurance Risk & Claims Analysis Dashboard using Power BI.
+
+In this project, I analyzed insurance data and used SQL to validate the results shown in the dashboard.
+
+**SQL Queries I Practiced:**
+
+1. Total Policies ?
+
+SELECT COUNT(DISTINCT ID) AS Total_Policies
+FROM insurance_data_car;
+
+2. Total Claim Amount ?
+
+SELECT SUM(`Claim Amount`) AS Total_Claim_Amount
+FROM insurance_data_car;
+
+3. Average Claim Frequency ?
+
+SELECT AVG(`Claim Freq`) AS Avg_Claim_Frequency
+FROM insurance_data_car;
+
+4. Average Claim Amount ?
+
+SELECT AVG(`Claim Amount`) AS Avg_Claim_Amount
+FROM insurance_data_car;
+
+5. Claim Amount by Car Use ?
+
+SELECT `Car Use`, SUM(`Claim Amount`) AS Total_Claim
+FROM insurance_data_car
+GROUP BY `Car Use`;
+
+6. Claim Amount by Car Make ?
+
+SELECT `Car Make`, SUM(`Claim Amount`) AS Total_Claim
+FROM insurance_data_car
+GROUP BY `Car Make`;
+
+7. Claim Amount by Coverage Zone ?
+
+SELECT `Coverage Zone`, SUM(`Claim Amount`) AS Total_Claim
+FROM insurance_data_car
+GROUP BY `Coverage Zone`;
+
+8. Claim Amount by Age Group ?
+
+SELECT `Age group`, SUM(`Claim Amount`) AS Total_Claim
+FROM insurance_data_car
+GROUP BY `Age group`;
+
+9. Claim Amount by Car Year ?
+
+SELECT `Car Year`, SUM(`Claim Amount`) AS Total_Claim
+FROM insurance_data_car
+GROUP BY `Car Year`;
+
+10. Claim Amount by Kids Driving ?
+
+SELECT `Kids D`, SUM(`Claim Amount`) AS Total_Claim
+FROM insurance_data_car
+GROUP BY `Kids D`;
+
+11. Claim Amount by Education ?
+
+SELECT Education, SUM(`Claim Amount`) AS Total_Claim
+FROM insurance_data_car
+GROUP BY Education;
+
+12. Claim Amount by Education and Marital Status ?
+
+SELECT Education, `Marital Status`,
+       SUM(`Claim Amount`) AS Total_Claim
+FROM insurance_data_car
+GROUP BY Education, `Marital Status`;
+
+13. Total Records and Unique Policies ?
+
+SELECT COUNT(*) AS Total_Records,
+       COUNT(DISTINCT ID) AS Unique_Policies
+FROM insurance_data_car;
+
+14. Check Missing Claim Amounts ?
+
+SELECT COUNT(*) AS Missing_Claims
+FROM insurance_data_car
+WHERE `Claim Amount` IS NULL;
+
+15. Check Duplicate Policy IDs ?
+
+SELECT ID, COUNT(*) AS Duplicate_Count
+FROM insurance_data_car
+GROUP BY ID
+HAVING COUNT(*) > 1;
+
+16. Claim Analysis by Car Use ?
+
+SELECT `Car Use`,
+       COUNT(*) AS Total_Records,
+       SUM(`Claim Amount`) AS Total_Claim,
+       AVG(`Claim Amount`) AS Avg_Claim
+FROM insurance_data_car
+GROUP BY `Car Use`;
+
+*Tools Used:SQL and Microsoft Power BI
+
+This project helped me practice SQL queries, data validation, and dashboard development. I’m continuing to improve my skills in SQL and Power BI through hands-on projects.
+
+Feedback and suggestions are welcome!
+
+#SQL #PowerBI #DataAnalyst #DataAnalytics #LearningJourney
